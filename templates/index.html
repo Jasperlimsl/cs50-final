@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    {% for post in posts %}
+        <div class="container-lg my-5">
+            <div class="card border-primary border-2">
+                <div class="card-header text-primary">
+                    <img src="{{ url_for('static', filename='profile_pics/default.jpg') }}" class="rounded-circle article-img">
+                    <a href="#" class="mx-4">{{ post.id }}</a>
+                    <small class="text-muted">{{ post.date_posted }}</small>
+                </div>
+                <div class="card-body text-center py-4">
+                    <h4 class="card-title">{{ post.title }}</h4>
+                    <p class="lead card-subtitle">{{ post.content }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
