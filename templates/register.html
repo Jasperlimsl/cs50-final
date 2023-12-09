@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<main class="form-signin w-50 m-auto">
+    <form method="POST" action="">
+        <!-- adds in a cross-site request forgery (CSRF) token to protect the form-->
+        {{ form.hidden_tag() }}
+
+        <h1 class="h3 my-4 fw-normal">Please Register</h1>
+        <div class="form-floating">
+            {{ form.username(class="form-control") }}
+            {{ form.username.label }}
+        </div>
+        <div class="form-floating">
+            {{ form.email(class="form-control") }}
+            {{ form.email.label }}
+        </div>
+        <div class="form-floating">
+            {{ form.password(class="form-control") }}
+            {{ form.password.label }}
+        </div>
+        <div class="form-floating">
+            {{ form.confirm_password(class="form-control") }}
+            {{ form.confirm_password.label }}
+        </div>
+        {{ form.submit(class="btn btn-primary w-100 py-2 my-3") }}
+    </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already have an Account? <a href="{{ url_for('login') }}">Sign In</a>
+        </small>
+    </div>
+</main>
+
+{% endblock %}
