@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<main class="form-signin w-50 m-auto">
+    <form method="POST" action="">
+        <!-- adds in a cross-site request forgery (CSRF) token to protect the form-->
+        {{ form.hidden_tag() }}
+
+        <h1 class="h3 my-4 fw-normal">Reset Password</h1>
+        <div class="form-group">
+            {{ form.email.label(class="form-control-label") }}
+            {% if form.email.errors %}
+                {{ form.email(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.email(class="form-control form-control-lg") }}
+            {% endif %}
+        </div>
+        <div>
+            {{ form.submit(class="btn btn-primary w-100 py-2 my-3") }}
+        </div>
+    </form>
+    <div>
+</main>
+{% endblock %}
