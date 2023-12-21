@@ -1,5 +1,5 @@
 # CS50 Blog
-#### Video Demo: <Insert URL>
+#### Video Demo: https://www.youtube.com/watch?v=UJBK5jUPH7Y
 #### Description: My final project for CS50x is a blog created using Flask-Python. 
 
 #### HTML, CSS, Javascript: The Flask Application uses bootstrap CSS and Javascript to style the HTML templates for aesthetics. 
@@ -21,3 +21,8 @@
 #### Error handling: In the routes.py file, I user @app.errorhandler to handle common errors such as 404, 403 and 500. The user is directed to a page showcasing the error. 
 #### Pagination: The paginate method from flask_sqlalchemy is used to split the blog posts into pages and allow users to navigate between pages. For my blog, each page shows a maximum of 5 posts. 
 
+## Files and their Functions
+#### The main folder is CS50-FINAL and within it is a 'run.py' file that runs the flask application. The 'cs50blog' folder is a package that contain a __init__.py file to run the application properly. 'routes.py' is a file containing all the routes in the application that links to the various html templates in the templates folder. 'models.py' is a file that defines the User and Post Class for the database. 'forms.py' is the file that contains all the forms used by the application. As previously mentioned, I used Flask-WTF with FlaskForm base class and wtforms library to manage the forms in the application. 
+#### The static folder within cs50blog contains the 'main.css' file which contains the css classes on top of bootstrap classes loaded into the html templates. The static folder also contains a folder called 'profile_pics' to hold all the profile pics uploaded by the user.
+#### There is also an 'instance' folder that contains the blog.db file, which is the database file of the application.
+#### the requirement.txt file contains all the required libraries and modules to run the application properly.
