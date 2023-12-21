@@ -1,1 +1,14 @@
+bcrypt
+datetime
 Flask
+Flask-Bcrypt
+Flask-Login
+Flask-Mail
+Flask-SQLAlchemy
+Flask-Wtf
+itsdangerous
+Jinja2
+Pillow
+SQLAlchemy
+WTforms
+

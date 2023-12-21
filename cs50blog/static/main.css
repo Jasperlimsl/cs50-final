@@ -2,3 +2,45 @@
     height: 65px;
     width: 65px;
   }
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1#blog-title {
+    color: #333;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #777;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.blog-link {
+    color: #007BFF;
+}
+
+.blog-link:hover {
+    text-decoration: underline;
+}
+
+.blog-description {
+    font-style: italic;
+    color: #555;
+}
